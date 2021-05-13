@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="./favicons/recyclebinfavicon.ico" type="image/x-icon" />
+    <title>Recycle Bin</title>
+    <link rel="stylesheet" type="text/css" href="window.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="main.js"></script>
+</head>
+
+<body onload="currentTime();">
+    <div class="root">
+        <div class="viewport">
+            <header>
+                <div id="title" class="bar">
+                    <img src="./icons/recycle_bin_empty-5.png" class="icon" style="width: 24px; height: 24px;">
+                    <h4 class="title" style="font-family: 'Comic Sans MS'; font-size: 1.3rem; position: absolute; left: 40px;">
+                        Recycle Bin</h4>
+                    <div class="mscContainer">
+                        <button class="mini btn">
+                            __
+                        </button>
+                        <button class="size btn">
+                            <img src="./icons/resize_btn.png" style="width: 20px;">
+                        </button>
+                        <button class="close btn" onclick="window.location.href='index.html'">
+                            <img src="./icons/close_btn.png" style="width: 20px;">
+                        </button>
+                    </div>
+                </div>
+                <div id="menu" class="bar">
+                    <div class="menuContainer">
+                        <div class="tabs"><span style="border-bottom: 2px solid black;">F</span>ile</div>
+                        <div class="tabs"><span style="border-bottom: 2px solid black;">E</span>dit</div>
+                        <div class="tabs"><span style="border-bottom: 2px solid black;">V</span>iew</div>
+                        <div class="tabs"><span style="border-bottom: 2px solid black;">G</span>o</div>
+                        <div class="tabs">F<span style="border-bottom: 2px solid black;">a</span>vourites</div>
+                        <div class="tabs"><span style="border-bottom: 2px solid black;">H</span>elp</div>
+                    </div>
+        
+                </div>
+                <div id="tool" class="bar">
+                    Tools
+                </div>
+                <div id="address" class="bar">
+                    <h4>Address</h4>
+                    <div class="addressTextField">
+        
+                    </div>
+                </div>
+            </header>
+            <div class="fileArea">
+            </div>
+            <div id="startMenu">
+                <img src="./side.jpeg">
+                <ul class="options">
+                    <li>
+                        <img src="./icons/windows_update_large-5.png">
+                        <h4>Windows Update</h4>
+
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="./icons/directory_closed-0.png">
+                        <h4><span style="border-bottom: 2px solid black;">P</span>rograms<i
+                                class="fas fa-caret-right"></i></h4>
+
+                    </li>
+                    <li>
+                        <img src="./icons/directory_favorites-2.png">
+                        <h4>F<span style="border-bottom: 2px solid black;">a</span>vourites<i
+                                class="fas fa-caret-right"></i></h4>
+
+                    </li>
+                    <li>
+                        <img src="./icons/directory_open_file_mydocs_2k-2.png">
+                        <h4><span style="border-bottom: 2px solid black;">D</span>ocuments<i
+                                class="fas fa-caret-right"></i></h4>
+
+                    </li>
+                    <li>
+                        <img src="./icons/settings_gear-5.png">
+                        <h4><span style="border-bottom: 2px solid black;">S</span>ettings<i
+                                class="fas fa-caret-right"></i></h4>
+
+                    </li>
+                    <li>
+                        <img src="./icons/search_file_2-4.png">
+                        <h4>
+                            <span style="border-bottom: 2px solid black;">F</span>ind<i class="fas fa-caret-right"></i>
+                        </h4>
+                    </li>
+                    <li>
+                        <img src="./icons/help_book_big-0.png">
+                        <h4><span style="border-bottom: 2px solid black;">H</span>elp</h4>
+                    </li>
+                    <li>
+                        <img src="./icons/application_hourglass_small-0.png">
+                        <h4><span style="border-bottom: 2px solid black;">R</span>un...</h4>
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="./icons/key_win-4.png">
+                        <h4><span style="border-bottom: 2px solid black;">L</span>og Off</h4>
+                    </li>
+                    <li>
+                        <img src="./icons/shut_down_normal-0.png">
+                        <h4><span style="border-bottom: 2px solid black;">S</span>hut Down...</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="taskbar">
+            <button id="start" class="" onclick="startOpen()">
+                <img src="./icons/windows-5.png" alt="winico">
+                Start
+            </button>
+            <div class="tasks" onclick="closeStart()">
+
+            </div>
+            <div id="clock">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

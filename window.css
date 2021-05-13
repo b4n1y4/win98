@@ -1,0 +1,85 @@
+.window{
+	position: absolute;
+	top: 0;
+	width: calc( 100% - 8px);
+	visibility: hidden;
+	height: calc( 100vh - 47.1px );
+	border: 4px groove rgb(168, 168, 168);
+}
+.bar{
+    outline: 1px solid rgb(73, 73, 73);
+    border: 2px solid white;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15px;
+    padding: 5px;
+    background-color: rgb(223, 223, 223);
+}
+#title{
+    background-color: rgb(0, 0, 146); 
+    color: white;
+}
+hr{
+    border-bottom:3px groove rgb(238, 238, 238);
+}
+.mscContainer{
+    /* width: 100px; */
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+}
+
+.mscContainer button{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(168, 168, 168);
+    margin: 1px;
+}
+
+.menuContainer{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 25px;
+    /* justify-content: space-evenly; */
+    gap: 3px;
+    position: absolute;
+    left: 20px;
+    /* background-color: red; */
+}
+
+.menuContainer .tabs{
+    /* width: 10px; */
+    font-size: 0.8rem;
+    /* background-color: yellow; */
+    margin: 1px 6px;
+}
+
+.menuContainer .tabs:hover{
+    background-color: rgb(185, 185, 185);
+    border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid rgb(92, 92, 92);
+	border-right: 1px solid rgb(92, 92, 92);
+}
+
+.tabs{
+    /* background-color: red; */
+    margin:1px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.fileArea{
+	background-color: white;
+    height: calc( 100vh - 168px);
+    border: 4px groove rgb(168, 168, 168);
+	overflow: auto;
+}

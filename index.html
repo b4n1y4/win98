@@ -2,63 +2,115 @@
 <html>
 
 <head>
-	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="./favicons/winlogofavicon.ico" type="image/x-icon" />
 	<title>Win98</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="window.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
 	<script src="main.js"></script>
 </head>
 
 <body onload="currentTime();">
 	<div id="root">
+		<!-- Desktop -->
 		<div class="desktop" onclick="closeStart()">
 			<div class="icon_container">
 				<div id="myComp" class="icon">
-					<img src="./icons/computer-4.png">
+					<img src="./icons/myComp.png">
 					<h4>My Computer</h4>
 				</div>
 				<div id="mydocs" class="icon">
-					<img src="./icons/directory_open_file_mydocs_2k-2.png">
+					<img src="./icons/docs.png">
 					<h4>My Documents</h4>
 				</div>
-				<div id="rBin" class="icon">
-					<img src="./icons/recycle_bin_empty-5.png">
+				<button id="rBinbtn" class="icon" ondblclick="app(1, 'rBin');">
+					<img src="./icons/rBin.png">
 					<h4>Recycle Bin</h4>
-				</div>
+				</button>
 				<div id="internet" class="icon">
-					<img src="./icons/msie1-5.png">
+					<img src="./icons/browser.png">
 					<h4>Connect to Internet</h4>
 				</div>
 			</div>
 		</div>
+		<!-- Recycle Bin -->
+		<div id="rBin" class="window" onclick="closeStart();">
+			<header>
+				<div id="title" class="bar">
+					<img src="./icons/rBin.png" class="titleIcon" style="width: 20px; height: 20px;">
+					<h4 class="title"
+						style="font-family: 'Comic Sans MS'; font-size: 1.3rem; position: absolute; left: 40px;">
+						Recycle Bin</h4>
+					<div class="mscContainer">
+						<button id="mini" class="btn" onclick="mscBtn(id, 1);">
+							<div style="width: 10px; height: 10px; border-bottom: 3px solid black;"></div>
+						</button>
+						<button id="size" class="btn" onclick="mscBtn(id, 2);">
+							<img src="./icons/resize_btn.png" style="width: 12px;">
+						</button>
+						<button id="close" class="btn" onclick="app(0, 'rBin');">
+							<img src="./icons/close_btn.png" style="width: 12px;">
+						</button>
+					</div>
+				</div>
+				<div id="menu" class="bar">
+					<div class="menuContainer">
+						<div class="tabs"><span style="border-bottom: 2px solid black;">F</span>ile</div>
+						<div class="tabs"><span style="border-bottom: 2px solid black;">E</span>dit</div>
+						<div class="tabs"><span style="border-bottom: 2px solid black;">V</span>iew</div>
+						<div class="tabs"><span style="border-bottom: 2px solid black;">G</span>o</div>
+						<div class="tabs">F<span style="border-bottom: 2px solid black;">a</span>vourites</div>
+						<div class="tabs"><span style="border-bottom: 2px solid black;">H</span>elp</div>
+					</div>
+
+				</div>
+				<div id="tool" class="bar">
+					Tools
+				</div>
+				<div id="address" class="bar">
+					<h4 style="font-family: 'Comic Sans MS'; font-weight: bold;">Address</h4>
+					<div class="addressTextField">
+
+					</div>
+				</div>
+			</header>
+			<div class="fileArea"></div>
+		</div>
+		<!-- taskbar -->
 		<div id="startMenu">
 			<img src="./side.jpeg">
 			<ul class="options">
 				<li>
 					<img src="./icons/windows_update_large-5.png">
 					<h4>Windows Update</h4>
-					 
+
 				</li>
 				<hr>
 				<li>
 					<img src="./icons/directory_closed-0.png">
-					<h4><span style="border-bottom: 2px solid black;">P</span>rograms<i class="fas fa-caret-right"></i></h4>
-					 
+					<h4><span style="border-bottom: 2px solid black;">P</span>rograms<i class="fas fa-caret-right"></i>
+					</h4>
+
 				</li>
 				<li>
 					<img src="./icons/directory_favorites-2.png">
-					<h4>F<span style="border-bottom: 2px solid black;">a</span>vourites<i class="fas fa-caret-right"></i></h4>
-					 
+					<h4>F<span style="border-bottom: 2px solid black;">a</span>vourites<i
+							class="fas fa-caret-right"></i></h4>
+
 				</li>
 				<li>
-					<img src="./icons/directory_open_file_mydocs_2k-2.png">
-					<h4><span style="border-bottom: 2px solid black;">D</span>ocuments<i class="fas fa-caret-right"></i></h4>
-					 
+					<img src="./icons/docs.png">
+					<h4><span style="border-bottom: 2px solid black;">D</span>ocuments<i class="fas fa-caret-right"></i>
+					</h4>
+
 				</li>
 				<li>
 					<img src="./icons/settings_gear-5.png">
-					<h4><span style="border-bottom: 2px solid black;">S</span>ettings<i class="fas fa-caret-right"></i></h4>
-					
+					<h4><span style="border-bottom: 2px solid black;">S</span>ettings<i class="fas fa-caret-right"></i>
+					</h4>
+
 				</li>
 				<li>
 					<img src="./icons/search_file_2-4.png">
@@ -91,13 +143,13 @@
 				Start
 			</button>
 			<div class="tasks" onclick="closeStart()">
-
+				<ul id="taskList">
+				</ul>
 			</div>
 			<div id="clock">
 			</div>
 		</footer>
 	</div>
-
 </body>
 
 </html>
